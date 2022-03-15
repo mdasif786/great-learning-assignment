@@ -13,8 +13,8 @@ public class Player {
 	private String name;
 	private PlayerStatus status;
 
-	public Player(String name, String id) {
-		this.id = id;
+	public Player(String name) {
+		this.id = RandomUtils.generateRandomUUID();
 		this.name = name;
 		this.status = PlayerStatus.READY;
 	}

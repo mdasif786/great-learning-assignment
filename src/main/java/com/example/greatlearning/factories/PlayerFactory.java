@@ -5,6 +5,6 @@ import com.example.greatlearning.utils.RandomUtils;
 
 public class PlayerFactory {
 	public Player createFactory(String name) {
-		return new Player(name, RandomUtils.generateRandomUUID());
+		return new Player(name);
 	}
 }

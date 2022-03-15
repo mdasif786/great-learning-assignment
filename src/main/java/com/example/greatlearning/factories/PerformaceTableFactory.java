@@ -6,6 +6,6 @@ import com.example.greatlearning.utils.RandomUtils;
 
 public class PerformaceTableFactory {
 	public Performance createPerformance(Player player) {
-		return new Performance(player, RandomUtils.generateRandomUUID(););
+		return new Performance(player);
 	}
 }
