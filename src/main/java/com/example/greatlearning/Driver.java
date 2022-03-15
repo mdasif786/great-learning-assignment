@@ -24,7 +24,7 @@ public class Driver {
 			
 			//check for mode 1 = Interactive, otherwise non-interactive
 			if(args.length >= 3) {
-				if(args[2] == "1") {
+				if(args[2] != null && args[2].equals("1")) {
 					isInteractive = true;
 				}
 			}
