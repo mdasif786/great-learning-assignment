@@ -66,4 +66,16 @@ public class DiceRollingHistory {
 		
 		return false;
 	}
+	
+	public boolean shouldAwardedWithBonus(String playerId, int currentDiceValue) {
+		if(history.containsKey(playerId)) {
+			LinkedList<Integer> diceHistory = new LinkedList<Integer>(history.get(playerId));
+			
+			if(diceHistory.size() >= 2 && (diceHistory.get(diceHistory.size() - 1) + diceHistory.get(diceHistory.size() - 2) + currentDiceValue == CommonConstants.TEN)) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
 }

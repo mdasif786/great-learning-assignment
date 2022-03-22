@@ -6,4 +6,6 @@ public class CommonConstants {
 	//Integer literal constants
 	public final static int SIX = 6;
 	public final static int ONE = 1;
+	public final static int TWO = 2;
+	public final static int TEN = 10;
 }

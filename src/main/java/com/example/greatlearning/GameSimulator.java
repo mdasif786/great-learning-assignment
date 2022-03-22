@@ -118,7 +118,11 @@ public class GameSimulator {
 		
 		Performance playerPerformance = scoreBoard.getPerformance(player.getId());
 		
-		playerPerformance.addToScore(number);
+		if(diceRollingHistory.shouldAwardedWithBonus(player.getId(), number)) {
+			playerPerformance.addToScore(CommonConstants.TWO * number);
+		} else {
+			playerPerformance.addToScore(number);
+		}
 		
 		if(playerPerformance.getScore() >= game.getMaxScore()) {
 			playerPerformance.setRank(rankService.getRankFromPool());
